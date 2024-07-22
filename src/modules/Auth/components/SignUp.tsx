@@ -3,6 +3,7 @@ import Input from '../../../components/Input/Input';
 import PasswordInput from '../../../components/Input/PasswordInput';
 import Button from '../../../components/Button/Button';
 import { useAuth } from '../../../hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
@@ -34,7 +35,7 @@ export default function SignUp() {
       />
       <Button type='submit' customClass='w-full mt-1'>Continue</Button>
       <p className="text-gray-300 font-medium mt-3 text-sm">
-        Already have an account?  {authModal == 'none' ? <a href="/login" className="text-gray-100 hover:underline">Login →</a> : <span onClick={showLoginModal} className="text-gray-100 hover:underline">Login →</span>}
+        Already have an account?  {authModal == 'none' ? <Link to="/login" className="text-gray-100 hover:underline">Login →</Link> : <span onClick={showLoginModal} className="text-gray-100 hover:underline">Login →</span>}
       </p>
     </div>
   );

@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+# Frontend Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application built with Vite, React, and TypeScript, using React Router v6 for routing.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite
+- React
+- TypeScript
+- React Router v6
+- Day.js
+- GitHub Pages (for deployment)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (version 16 or higher)
+- npm (version 12 or higher)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository:
+git clone https://github.com/weekash/breathing-pond.git
+Copy
+2. Navigate to the project directory:
+`cd your-repo-name`
+3. Install dependencies:
+`npm install`
+
+### Development
+
+To run the project in development mode:
+`npm run dev`
+
+### Build
+
+To build the project for production:
+`npm run build`
+
+## Routing
+
+This project uses React Router v6 for routing. Due to deployment on GitHub Pages, we've switched from BrowserRouter to HashRouter.
+
+Accessible routes:
+- [/#/feed](https://weekash.github.io/breathing-pond/#/feed)
+- [/#/login](https://weekash.github.io/breathing-pond/#/login)
+- [/#/signup](https://weekash.github.io/breathing-pond/#/signup)
+
+## Deployment
+
+This project is deployed using GitHub Pages. The switch from BrowserRouter to HashRouter was necessary to ensure proper routing on GitHub Pages.
+1. Change base path in  `vite.config.ts`
+2. Change `homepage` in `package.json`
+3. To deploy the project:
+`npm run deploy`

@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import AppRoutes from './routes/AppRoutes'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import dayjs from 'dayjs';
@@ -8,9 +8,9 @@ dayjs.extend(relativeTime);
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <AppRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   )
 }
