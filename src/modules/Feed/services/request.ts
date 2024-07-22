@@ -6,4 +6,5 @@ export function getPosts():Array<Post>{
 
 export function loadComments(postId:string,params?:GenericParams){
     // function to get comments of a post
+    console.log(postId, params)
 }
